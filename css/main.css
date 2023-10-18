@@ -7088,7 +7088,7 @@ h1 + p, h2 + p, h3 + p, .member-name + p {
   order: 0; }
   @media (min-width: 768px) {
     .news-container {
-      order: 1; } }
+      order: 0; } }
   .news-container + div {
     padding-right: 30px; }
 
