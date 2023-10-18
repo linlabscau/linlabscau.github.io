@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -23,22 +24,66 @@
 	<script src="js/jquery-3.2.1.slim.min.js"></script>
 	<script src="js/bootstrap.bundle.min.js"></script>
 	<script src="js/obfuscator.js"></script>
+	<style>
+		.photo_back {
+			width: 60%;
+			margin-right: auto;
+			margin-left: auto;
+			height: 500px;
+			border: 1px solid #656565;
+			background-color: white;
+			margin-bottom: 200px;
+		}
+
+		.photo_img_back {
+			width: 100%;
+			margin-top: 20px;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			flex-wrap: wrap;
+			padding-bottom: 20px;
+		}
+
+		.photo_title {
+			width: 100%;
+			text-align: center;
+			/* font-family: file,sthupo; */
+			font-size: 30px;
+			margin-top: 20px;
+			margin-bottom: 50px;
+		}
+
+		.photo_img img {
+			width: 100%;
+		}
+
+		.img {
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			vertical-align: middle;
+			border: 0;
+		}
+	</style>
 </head>
 
 <body>
 	<div class="container">
 		<nav class="navbar navbar-expand-md navbar-light">
-			<a class="navbar-brand" href="/" style="font-weight: bold;color: inherit;"><img  style="width: 50px;height: 50px;" src="image/logo.png" class="logo-img" alt="LOGO">  CROPGENOMEEDITING LAB
+			<a class="navbar-brand" href="/" style="font-weight: bold;color: inherit;"><img
+					style="width: 50px;height: 50px;" src="image/logo.png" class="logo-img" alt="LOGO">
+				CROPGENOMEEDITING LAB
 			</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar"
+				aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
-				
+
 			<div class="collapse navbar-collapse" id="mainNavbar" style="font-size: 14px;font-weight: bold;">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item">
 						<a class="nav-link" href="/">Home</a>
-					</li>		
+					</li>
 					<li class="nav-item">
 						<a class="nav-link " href="qiupeng.html">QiupengLin</a>
 					</li>
@@ -65,20 +110,32 @@
 		</nav>
 	</div>
 
-    <div class="container section">
+	<div class="container section">
 		<div class="row">
 			<div class="col-12">
-				<h1>NEWS</h1>
+				<div class="photo_back">
+					<div class="photo_title">
+						2023&ensp;Qinhuangdao
+					</div>
+					<div class="photo_img_back">
+						<div class="photo_img"><img src="image/demoph.jpg"></div>
+					</div>
+				</div>
+			</div>
+			<div class="col-12">
+				<div class="photo_back">
+					<div class="photo_title">
+						2023&ensp;Qinhuangdao
+					</div>
+					<div class="photo_img_back">
+						<div class="photo_img"><img src="image/demoph.jpg"></div>
+					</div>
+				</div>
 			</div>
 		</div>
-		
-		<div class="row section">
-			<div class="col-12 col-md-6 news-items">
-			</div>
-		</div>
-    </div>
+	</div>
 </body>
-	
+
 <footer>
 	<div class="bottom-bar panel">
 		<div class="row justify-content-center">
@@ -90,4 +147,5 @@
 		</div>
 	</div>
 </footer>
+
 </html>
