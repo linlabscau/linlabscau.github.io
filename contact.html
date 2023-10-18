@@ -23,6 +23,24 @@
 	<script src="js/jquery-3.2.1.slim.min.js"></script>
 	<script src="js/bootstrap.bundle.min.js"></script>
 	<script src="js/obfuscator.js"></script>
+	<script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?callback=loadMapScenario' async defer></script>
+	<script>
+function loadMapScenario() {
+    var map = new Microsoft.Maps.Map('#bingMap', {
+        credentials: 'AuJKkJpRdzC6Lfaca39hKe441B9lNXs5xtqC-S7Rz4_8Xwq_nhekIlE5bg-k4Y6X',
+        center: new Microsoft.Maps.Location(23.160988,113.358831),
+        zoom: 16
+    });
+
+    var location = new Microsoft.Maps.Location(23.160988,113.358831); // 地点的经纬度坐标
+    var pushpin = new Microsoft.Maps.Pushpin(location, {
+        title: '我的地点', // 标题
+        subTitle: '华南农业大学农学院', // 子标题
+    });
+
+    map.entities.push(pushpin); // 将推入钉子添加到地图
+}
+	</script>
 </head>
 
 <body>
@@ -85,7 +103,8 @@
 			
 				<div class="col col-md-6">
 					<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3413.1017466420644!2d121.5946461!3d31.1901921!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35b2779193742525%3A0x2c761eedc6f26c79!2sFudan%20University%20Zhangjiang%20Campus!5e0!3m2!1sen!2s!4v1695557025684!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3668.366416657679!2d113.35110617506781!3d23.156823111305386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3402fe6947e77921%3A0xa0735e5938208729!2z5Y2O5Y2X5Yac5Lia5aSn5a2m!5e0!3m2!1szh-CN!2sjp!4v1697535902056!5m2!1szh-CN!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+					<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3668.366416657679!2d113.35110617506781!3d23.156823111305386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3402fe6947e77921%3A0xa0735e5938208729!2z5Y2O5Y2X5Yac5Lia5aSn5a2m!5e0!3m2!1szh-CN!2sjp!4v1697535902056!5m2!1szh-CN!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+					<div id="bingMap" style="position:relative;width:600px;height:400px;"></div>
 				</div>
 			</div>
 		</div>
