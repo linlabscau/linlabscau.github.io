@@ -22,7 +22,23 @@
 
 	<script src="js/jquery-3.2.1.slim.min.js"></script>
 	<script src="js/bootstrap.bundle.min.js"></script>
-	<script src="js/obfuscator.js"></script>
+	<script src="js/obfuscator.js"></script><script>
+		function loadMapScenario() {
+			var map = new Microsoft.Maps.Map('#bingMap', {
+				credentials: 'AuJKkJpRdzC6Lfaca39hKe441B9lNXs5xtqC-S7Rz4_8Xwq_nhekIlE5bg-k4Y6X',
+				center: new Microsoft.Maps.Location(23.160988,113.358831),
+				zoom: 16
+			});
+		
+			var location = new Microsoft.Maps.Location(23.160988,113.358831); // 地点的经纬度坐标
+			var pushpin = new Microsoft.Maps.Pushpin(location, {
+				title: '我的地点', // 标题
+				subTitle: '华南农业大学农学院', // 子标题
+			});
+		
+			map.entities.push(pushpin); // 将推入钉子添加到地图
+		}
+			</script>
 </head>
 	
 <body>
